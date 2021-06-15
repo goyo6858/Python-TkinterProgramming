@@ -1,0 +1,24 @@
+#简单计算器Ch3
+
+from tkinter import *
+
+def frame(root, side):
+  w=Frame(root) 
+  w.pack(side=side,expand=YES,fill=BOTH) #side=side?-后面的side是frame()函数的参数
+  return w
+
+def button(root,side,text,command=None):
+  w=Button(root,text=text,command=command)
+  w.pack(side=side,expand=YES,fill=Both)
+  return w
+ 
+class Calculator(Frame): #继承
+  def __init__(self):
+    Frame.__init__(self) #含义？
+    self.pack(expand=YES,fill=BOTH)
+    self.master.title('Simple Calculator') #master?
+    self.master.iconname("Calc1") #为什么是双引号？
+    
+    display=StringVar() #
+    
+  
